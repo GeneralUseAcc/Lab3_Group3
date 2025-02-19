@@ -14,11 +14,13 @@ def trapezium_area(a, b, h):
     """Calculates the area of a trapezium given base A, base B and the height"""
     return ((a+b)/2)*h
 
-def ellipse_area():
-    """Calculates the area of a circle given the radius"""
+def ellipse_area(a, b):
+    """Calculates the area of an ellipse given a and b"""
+    return pi*a*b
 
-def rhombus_area():
-    """Calculates the area of a circle given the radius"""
+def rhombus_area(p, q):
+    """Calculates the area of a rhombus given p and q"""
+    return (p*q)/2
 
 # Test function
 radii = [2, 0, -3, 2 + 5j, True, "radius"]
