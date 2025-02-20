@@ -18,6 +18,7 @@ def shape_test_suite():
             shape_suite.addTest(unittest.makeSuite(TestArea))
             runner = unittest.TextTestRunner()
             print(runner.run(shape_suite))
-
+        elif user_input == 'q':
+            quit()
 
 shape_test_suite()
