@@ -5,27 +5,33 @@
 
 from math import pi
 
+class ShapeArea(object):
+    def circle_area(self, r):
+        """Calculates the area of a circle given the radius"""
+        return round((pi * (r ** 2)), 2)
 
-def circle_area(r):
-    """Calculates the area of a circle given the radius"""
-    return pi * (r ** 2)
+    def trapezium_area(self, a, b, h):
+        """Calculates the area of a trapezium given base A, base B and the height"""
+        return round(((( a + b ) / 2) * h), 2)
 
-def trapezium_area(a, b, h):
-    """Calculates the area of a trapezium given base A, base B and the height"""
-    return ((a+b)/2)*h
+    def ellipse_area(self, a, b):
+        """Calculates the area of an ellipse given a and b"""
+        return round((pi * a * b), 2)
 
-def ellipse_area(a, b):
-    """Calculates the area of an ellipse given a and b"""
-    return pi*a*b
+    def rhombus_area(self, p, q):
+        """Calculates the area of a rhombus given p and q"""
+        return round(((p * q) / 2), 2)
 
-def rhombus_area(p, q):
-    """Calculates the area of a rhombus given p and q"""
-    return (p*q)/2
 
-# Test function
-radii = [2, 0, -3, 2 + 5j, True, "radius"]
-message = "Area of circles with r = {radius} is {area}."
 
-for r in radii:
-    A = circle_area(r)
-    print(message.format(radius=r, area=A))
+if __name__ == '__main__':
+    shape = ShapeArea()
+
+    # Test function
+    # radii = [2, 0, -3, 2 + 5j, True, "radius"]
+    radii = [5]
+    message = "Area of circles with r = {radius} is {area}."
+
+    for r in radii:
+        A = shape.circle_area(r)
+        print(message.format(radius=r, area=A))
