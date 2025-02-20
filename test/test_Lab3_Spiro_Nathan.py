@@ -14,7 +14,13 @@ class TestCircleArea(unittest.TestCase):
     def setUp(self):
         print("setUp")
 
+    def test_circle_area(self):
 
+    def test_trapezium_area(self):
+
+    def test_ellipse_area(self):
+
+    def test_rhombus_area(self):
 
     def tearDown(self):
         print()
