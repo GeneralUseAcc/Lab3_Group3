@@ -1,1 +1,1 @@
-
+Task Distribution: Spiro wrote the main app's functions, wrote the test/test suite's functions and imported all necessary libraries. Nathan wrote all the test cases for the program along with implementing all validation logic in the main app.
