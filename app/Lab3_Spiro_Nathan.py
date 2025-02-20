@@ -11,19 +11,33 @@ class ShapeArea(object):
     def circle_area(self, r):
         """Calculates the area of a circle given the radius"""
         if not isinstance(r, (int)):
-            raise ValueError("Radius must be an integer")
+            raise ValueError("Input must be an integer")
         return round(pi * (r ** 2), 2)
 
     def trapezium_area(self, a, b, h):
         """Calculates the area of a trapezium given base A, base B and the height"""
+        if not isinstance(a, (int)):
+            raise ValueError("Input must be an integer")
+        elif not isinstance(b, (int)):
+            raise ValueError("Input must be an integer")
+        elif not isinstance(h, (int)):
+            raise ValueError("Input must be an integer")
         return round(((( a + b ) / 2) * h), 2)
 
     def ellipse_area(self, a, b):
         """Calculates the area of an ellipse given a and b"""
+        if not isinstance(a, (int)):
+            raise ValueError("Input must be an integer")
+        elif not isinstance(b, (int)):
+            raise ValueError("Input must be an integer")
         return round((pi * a * b), 2)
 
     def rhombus_area(self, p, q):
         """Calculates the area of a rhombus given p and q"""
+        if not isinstance(p, (int)):
+            raise ValueError("Input must be an integer")
+        elif not isinstance(q, (int)):
+            raise ValueError("Input must be an integer")
         return round(((p * q) / 2), 2)
 
 
