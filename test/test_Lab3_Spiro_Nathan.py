@@ -10,21 +10,25 @@ from app.Lab3_Spiro_Nathan import ShapeArea
 
 
 class TestCircleArea(unittest.TestCase):
-    def setUpClass(self):
-        print("setUpClass")
+    @classmethod
+    def setUpClass(cls):
+        print('setupClass')
 
     def setUp(self):
         print("setUp")
+        self.shape_tester = ShapeArea()
 
     def test_circle_01(self):
         """Test areas when radius = 5"""
-        self.assertEqual(78.54, ShapeArea.circle_area(self, 5))
+        self.assertEqual(78.54, self.shape_tester.circle_area(5))
 
     def tearDown(self):
         print("End of test: ", self.shortDescription())
 
-    def tearDownClass(self):
-        print("tearDownClass")
+    @classmethod
+    def tearDownClass(cls):
+        print('teardownClass')
+
 
 
 if __name__ == '__main__':
