@@ -4,14 +4,15 @@
 # Description: A program for calculating the area of various shapes.
 
 from math import pi
-
 # DOES THIS WORK?
 
 
 class ShapeArea(object):
     def circle_area(self, r):
         """Calculates the area of a circle given the radius"""
-        return round((pi * (r ** 2)), 2)
+        if not isinstance(r, (int)):
+            raise ValueError("Radius must be an integer")
+        return round(pi * (r ** 2), 2)
 
     def trapezium_area(self, a, b, h):
         """Calculates the area of a trapezium given base A, base B and the height"""

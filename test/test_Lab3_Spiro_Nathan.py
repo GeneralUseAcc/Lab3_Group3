@@ -22,6 +22,24 @@ class TestArea(unittest.TestCase):
         """Test areas when radius = 5"""
         self.assertEqual(78.54, self.shape_tester.circle_area(5))
 
+    def test_circle_02(self):
+        self.assertRaises(ValueError, self.shape_tester.circle_area(-5))
+
+    def test_circle_03(self):
+        self.assertEqual(0, self.shape_tester.circle_area(0))
+
+    def test_trapezium_01(self):
+        """Test areas when radius = 5"""
+        self.assertEqual()
+
+    def test_ellipse_01(self):
+        """Test areas when radius = 5"""
+        self.assertEqual()
+
+    def test_rhombus_01(self):
+        """Test areas when radius = 5"""
+        self.assertEqual()
+
     def tearDown(self):
         print("End of test: ", self.shortDescription())
 
