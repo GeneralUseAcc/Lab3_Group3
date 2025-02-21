@@ -34,6 +34,9 @@ class TestArea(unittest.TestCase):
         """Test if input is 0"""
         self.assertRaises(ValueError, self.shape_tester.circle_area, (0))
 
+    def test_circle_05(self):
+        """Test if complex number input raises ValueError"""
+        self.assertRaises(ValueError, self.shape_tester.circle_area, (5j))
 
     def test_trapezium_01(self):
         """Test area when bases = 10, 20 and height = 5 (valid case)"""
@@ -53,6 +56,11 @@ class TestArea(unittest.TestCase):
         """Test if input is 0"""
         with self.assertRaises(ValueError):
             self.shape_tester.trapezium_area(0,0,0)
+
+    def test_trapezium_05(self):
+        """Test if complex number input raises ValueError"""
+        with self.assertRaises(ValueError):
+            self.shape_tester.trapezium_area(12, 21, 5j)
 
 
     def test_ellipse_01(self):
@@ -74,6 +82,11 @@ class TestArea(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.shape_tester.ellipse_area(0, 0)
 
+    def test_ellipse_05(self):
+        """Test if complex number input raises ValueError"""
+        with self.assertRaises(ValueError):
+            self.shape_tester.ellipse_area(6, 3j)
+
 
     def test_rhombus_01(self):
         """Test area when diagonals = 8, 6 (valid case)"""
@@ -93,6 +106,11 @@ class TestArea(unittest.TestCase):
         """Test if input is 0"""
         with self.assertRaises(ValueError):
             self.shape_tester.rhombus_area(0, 0)
+
+    def test_rhombus_05(self):
+        """Test if complex number input raises ValueError"""
+        with self.assertRaises(ValueError):
+            self.shape_tester.rhombus_area(8j, 6)
 
 
     def tearDown(self):
