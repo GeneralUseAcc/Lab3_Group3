@@ -10,7 +10,7 @@ from math import pi
 class ShapeArea(object):
     def circle_area(self, r):
         """Calculates the area of a circle given the radius"""
-        if not isinstance(r, (int)):
+        if not isinstance(r, int):
             raise ValueError("Input must be an integer")
         elif r <= 0:
             raise ValueError("Input cant be negative")
