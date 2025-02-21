@@ -14,7 +14,8 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif r <= 0:
             raise ValueError("Input cant be negative")
-        return round(pi * (r ** 2), 2)
+        else:
+            return round(pi * (r ** 2), 2)
 
     def trapezium_area(self, a, b, h):
         """Calculates the area of a trapezium given base A, base B and the height"""
@@ -26,7 +27,8 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif a <= 0 or b <= 0 or h <= 0:
             raise ValueError("Input cant be negative")
-        return round(((( a + b ) / 2) * h), 2)
+        else:
+            return round(((( a + b ) / 2) * h), 2)
 
     def ellipse_area(self, a, b):
         """Calculates the area of an ellipse given a and b"""
@@ -36,7 +38,8 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif a <= 0 or b <= 0:
             raise ValueError("Input cant be negative")
-        return round((pi * a * b), 2)
+        else:
+            return round((pi * a * b), 2)
 
     def rhombus_area(self, p, q):
         """Calculates the area of a rhombus given p and q"""
@@ -46,7 +49,8 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif p <= 0 or q <= 0:
             raise ValueError("Input cant be negative")
-        return round(((p * q) / 2), 2)
+        else:
+            return round(((p * q) / 2), 2)
 
 
 
