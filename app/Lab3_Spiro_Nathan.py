@@ -54,8 +54,8 @@ if __name__ == '__main__':
     shape = ShapeArea()
 
     # Test function
-    # radii = [2, 0, -3, 2 + 5j, True, "radius"]
-    radii = [5]
+    radii = [2, 0, -3, 2 + 5j, True, "radius"]
+    # radii = [5]
     message = "Area of circles with r = {radius} is {area}."
 
     for r in radii:
