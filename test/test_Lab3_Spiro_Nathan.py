@@ -20,7 +20,7 @@ class TestArea(unittest.TestCase):
 
     def test_circle_01(self):
         """Test area when radius = 5"""
-        self.assertEqual(self.shape_tester.circle_area(5), round(78.54, 2))
+        self.assertEqual(self.shape_tester.circle_area(5), (78.54))
 
     def test_circle_02(self):
         """Test if float input raises ValueError"""
