@@ -59,5 +59,8 @@ if __name__ == '__main__':
     message = "Area of circles with r = {radius} is {area}."
 
     for r in radii:
-        A = shape.circle_area(r)
-        print(message.format(radius=r, area=A))
+        try:
+            A = shape.circle_area(r)
+            print(message.format(radius=r, area=A))
+        except ValueError:
+            print("Error: invalid input")
