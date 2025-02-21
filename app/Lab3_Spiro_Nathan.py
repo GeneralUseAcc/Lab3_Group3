@@ -24,7 +24,7 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif not isinstance(h, int):
             raise ValueError("Input must be an integer")
-        elif a or b or h <= 0:
+        elif a <= 0 or b <= 0 or h <= 0:
             raise ValueError("Input cant be negative")
         return round(((( a + b ) / 2) * h), 2)
 
@@ -34,7 +34,7 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif not isinstance(b, int):
             raise ValueError("Input must be an integer")
-        elif a or b <= 0:
+        elif a <= 0 or b <= 0:
             raise ValueError("Input cant be negative")
         return round((pi * a * b), 2)
 
@@ -44,7 +44,7 @@ class ShapeArea(object):
             raise ValueError("Input must be an integer")
         elif not isinstance(q, int):
             raise ValueError("Input must be an integer")
-        elif p or q <= 0:
+        elif p <= 0 or q <= 0:
             raise ValueError("Input cant be negative")
         return round(((p * q) / 2), 2)
 

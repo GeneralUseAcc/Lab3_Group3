@@ -57,7 +57,7 @@ class TestArea(unittest.TestCase):
 
     def test_ellipse_01(self):
         """Test area when a = 7, b = 4 (valid case)"""
-        self.assertEqual(self.shape_tester.ellipse_area(7, 4), round(87.96, 2))
+        self.assertEqual(self.shape_tester.ellipse_area(7, 4), 87.96)
 
     def test_ellipse_02(self):
         """Test if float input raises ValueError"""
